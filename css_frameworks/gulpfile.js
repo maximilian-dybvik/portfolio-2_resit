@@ -20,6 +20,13 @@ gulp.task('copyJs', callback => {
   callback();
 });
 
+// Copy asset files to dist folder
+gulp.task('copyAssets', callback => {
+  gulp.src('./src/images/**/*')
+    .pipe(gulp.dest('./dist/images'));
+  callback();
+});
+
 // Transpile SASS to CSS with sourcemaps
 gulp.task('sass', callback => {
   gulp.src('./src/sass/**/*.{sass,scss}')
@@ -64,7 +71,7 @@ gulp.task('watch', callback => {
 gulp.task('build', gulp.series('copyHtml', 'copyJs', 'sass-build'));
 
 // Start, watches files for changes and transpiles Sass
-gulp.task('start', gulp.series('copyHtml', 'copyJs', 'sass'));
+gulp.task('start', gulp.series('copyHtml', 'copyJs', 'copyAssets', 'sass'));
 
 // Default task
-gulp.task('default', gulp.series('copyHtml', 'copyJs', 'sass', 'watch', 'serve'));
+gulp.task('default', gulp.series('start', 'watch', 'serve'));
