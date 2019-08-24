@@ -1,62 +1,114 @@
-// Typography //
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i|Raleway:400,400i,700&display=swap')
-
-// font-family: 'Raleway', sans-serif
-// font-family: 'Montserrat', sans-serif
-
-// // Color Palette //
-hsla(215, 7%, 33%, 1.00)
-hsla(109, 0%, 51%, 1.00)
-hsla(37, 42%, 76%, 1.00)
-hsla(109, 0%, 95%, 1.00)
-hsla(38, 100%, 99%, 1.00)
-hsla(35, 100%, 49%, 1.00)
-hsla(186, 98%, 41%, 1.00)
-
-  
-body
-  background-color: #828282
-  
-// *
-//   border: 1px solid red
+// Import SASS partials //
+@import "./typography"
+@import "./colors"
 
 .container
-  margin: 0 auto
-  max-width: 960px
-  width: 100%
-  
+  padding: 0
+
 .header
-  padding: 1rem 0
   height: 100vh
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4jG-wMGbG3nlI4WB14niwl9nyyle4PaVIBmUVsiFqSQDnQ1FqrA")
   background-size: cover
   background-position: center
+  &--home
+    background-image: url("./images/headers/home.jpg")
+  &--destinations
+    background-image: url("./images/headers/destinations.jpg")
+  &--contact
+    background-image: url("./images/headers/contact.jpg")
   &__logo
-    height: 60px
-    width: auto
-    position: relative
-    left: 50%
-    transform: translateX(-50%)
-  &__nav
-    margin-top: 1rem
     text-align: center
-    ul
-      padding: 0
-      margin: 0
-      list-style: none
-    li
-      display: inline
+    margin: 1rem 0
+    @media (min-width: 576px)
+      text-align: left
+    @media (min-width: 992px)
+      margin-top: 2rem
+    img
+      height: 2rem
+      width: auto
       margin-right: 1rem
-      &:last-of-type
-        margin-right: 0 
+      @media (min-width: 992px)
+        height: 3rem
+    span
+      font-family: $raleway
+      font-weight: 700
+      font-size: 1rem
+      letter-spacing: 1px
+      color: $warm-white
+      @media (min-width: 992px)
+        font-size: 1.3rem
+  &__nav
+    text-align: center
+    @media (min-width: 576px)
+      text-align: right 
+    &--active
+      position: relative
+      &::after
+        z-index: 10
+        position: absolute
+        top: -.8rem
+        right: 50%
+        transform: translateX(100%)
+        content: ""
+        background-color: $orange
+        height: .3rem
+        width: .3rem
+        border-radius: 100%
+        @media (min-width: 992px)
+          top: -1rem
+          height: .5rem
+          width: .5rem
     a
-      color: inherit
+      margin-right: 1rem
       cursor: pointer
       text-decoration: none
       text-transform: uppercase
-  &__heading
-    padding: 0 1rem
-    margin: 0 auto
-    text-transform: uppercase
-    font-size: 55px
-    color: white
+      font-family: $montserrat
+      font-weight: 500
+      font-size: .8rem
+      color: $warm-white
+      &:last-of-type
+        margin: 0
+      @media (min-width: 992px)
+        margin-right: 1.5rem
+        font-size: 1.3rem
+
+// .container
+//   margin: 0 auto
+//   max-width: 960px
+//   width: 100%
+  
+// .header
+//   height: 100vh
+//   background-size: cover
+//   background-position: center
+//   &__logo
+//     height: 60px
+//     width: auto
+//     position: relative
+//     left: 50%
+//     transform: translateX(-50%)
+//   &__nav
+//     margin-top: 1rem
+//     text-align: center
+//     ul
+//       padding: 0
+//       margin: 0
+//       list-style: none
+//     li
+//       display: inline
+//       margin-right: 1rem
+//       &:last-of-type
+//         margin-right: 0 
+//     a
+//       color: inherit
+//       cursor: pointer
+//       text-decoration: none
+//       text-transform: uppercase
+//   &__heading
+//     padding: 0 1rem
+//     margin: 0 auto
+//     text-transform: uppercase
+//     font-size: 55px
+//     color: white
+//   &--home
+//     background-image: url("./images/headers/home.jpg")
