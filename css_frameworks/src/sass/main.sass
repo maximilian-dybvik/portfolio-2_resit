@@ -88,45 +88,48 @@
         font-size: 6rem
     span
       font-weight: 700
-    
 
-// .container
-//   margin: 0 auto
-//   max-width: 960px
-//   width: 100%
-  
-// .header
-//   height: 100vh
-//   background-size: cover
-//   background-position: center
-//   &__logo
-//     height: 60px
-//     width: auto
-//     position: relative
-//     left: 50%
-//     transform: translateX(-50%)
-//   &__nav
-//     margin-top: 1rem
-//     text-align: center
-//     ul
-//       padding: 0
-//       margin: 0
-//       list-style: none
-//     li
-//       display: inline
-//       margin-right: 1rem
-//       &:last-of-type
-//         margin-right: 0 
-//     a
-//       color: inherit
-//       cursor: pointer
-//       text-decoration: none
-//       text-transform: uppercase
-//   &__heading
-//     padding: 0 1rem
-//     margin: 0 auto
-//     text-transform: uppercase
-//     font-size: 55px
-//     color: white
-//   &--home
-//     background-image: url("./images/headers/home.jpg")
+.featured
+  background-color: $warm-white
+  &__heading
+    text-align: center
+    text-transform: uppercase
+    font-family: $montserrat
+    font-size: .8rem
+    font-weight: 300
+    color: $light-grey
+    margin-top: 1.5rem
+    margin-bottom: 1rem
+    @media (min-width: 992px)
+      font-size: 1.3rem
+      margin-top: 3rem
+      margin-bottom: 2rem
+  &__card
+    &:nth-child(n+4)
+      @media (max-width: 575px)
+        display: none
+  &__image
+    width: 100%
+  &__country
+    display: inline-block
+    position: relative
+    top: -2.5rem
+    left: 1.3rem
+    font-family: $montserrat
+    font-size: 1.2rem
+    font-weight: 700
+    color: $warm-white
+    margin-bottom: 0
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5)
+    @media (min-width: 992px)
+      font-size: 1.3rem
+  &__link
+    cursor: pointer
+    text-decoration: none
+    font-family: $raleway
+    font-size: 1rem
+    font-weight: 400
+    color: $blue !important
+    margin-bottom: 1.5rem
+    @media (min-width: 992px)
+      font-size: 1.3rem
