@@ -91,6 +91,7 @@
 
 .featured
   background-color: $warm-white
+  padding-bottom: 1.5rem
   &__heading
     text-align: center
     text-transform: uppercase
@@ -110,6 +111,10 @@
         display: none
   &__image
     width: 100%
+    transition: all.2s ease
+    &:hover, &:active
+      box-shadow: 0px 0px 12px rgba(0,0,0,0.5)
+      transform: scale(1.01)
   &__country
     display: inline-block
     position: relative
@@ -133,3 +138,117 @@
     margin-bottom: 1.5rem
     @media (min-width: 992px)
       font-size: 1.3rem
+  
+.testimonials
+  background-color: $cold-white
+  padding-top: 1.5rem
+  padding-bottom: 1.5rem
+  &__heading
+    text-align: center
+    text-transform: uppercase
+    font-family: $montserrat
+    font-size: .8rem
+    font-weight: 300
+    color: $light-grey
+    margin-bottom: .5rem
+    @media (min-width: 992px)
+      font-size: 1.3rem
+      margin-top: 3rem
+      margin-bottom: 2rem
+  &__card
+    &:nth-child(n+3)
+      @media (max-width: 992px)
+        display: none
+.testimonial
+  width: 100%
+  margin: .5rem 0
+  padding: 1rem
+  background-color: $warm-white
+  q
+    font-family: $raleway
+    font-size: 1rem
+    font-style: italic
+    color: $light-grey 
+  &__user
+    margin-top: 1.5rem
+    img
+      height: 2.5rem
+      width: auto
+      border-radius: 100%
+      border: 2px solid $orange
+      margin-right: 1rem
+    span
+      font-family: $raleway
+      font-size: .8rem
+      color: $orange
+
+.contact
+  background-color: $dark-grey
+  padding: 1.5rem 1rem
+  text-align: center
+  &__heading
+    text-align: center
+    text-transform: uppercase
+    font-family: $montserrat
+    font-size: .8rem
+    font-weight: 300
+    color: $warm-grey
+    margin-bottom: 1rem
+    @media (min-width: 992px)
+      font-size: 1.3rem
+      margin-top: 3rem
+      margin-bottom: 2rem
+  h2
+    font-family: $montserrat
+    font-size: 3rem
+    font-style: italic
+    color: $warm-white
+    margin-bottom: 1rem
+  p
+    margin: 0 auto
+    max-width: 30rem
+    font-size: 1.1rem
+    color: $warm-grey
+    margin-bottom: 1.5rem
+  a
+    display: inline-block
+    padding: .5rem 1rem
+    background-color: $orange
+    text-transform: uppercase
+    color: $warm-white
+    text-decoration: none
+    transition: all .3s ease
+    &:hover, &:active
+      background-color: $warm-white
+      color: $orange
+
+.footer
+  padding: 1.5rem
+  text-align: center
+  &__logo
+    margin-bottom: 1rem
+    @media (min-width: 575px)
+      margin-bottom: 0
+    img
+      height: 2rem
+      width: auto
+      margin-right: 1rem
+      @media (min-width: 992px)
+        height: 3rem
+    span
+      font-family: $raleway
+      font-weight: 700
+      font-size: 1rem
+      letter-spacing: 1px
+      color: $dark-grey
+      @media (min-width: 992px)
+        font-size: 1.3rem
+  &__copyright
+    p
+      font-family: $raleway
+      font-size: .8rem
+      color: $light-grey
+      margin-bottom: 0
+    a
+      color: lighten($orange, 20%)
+      text-decoration: none
