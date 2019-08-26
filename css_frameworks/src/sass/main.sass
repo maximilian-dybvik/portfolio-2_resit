@@ -18,6 +18,8 @@
   &__logo
     text-align: center
     margin: 1rem 0
+    &:hover, &:active
+      text-decoration: none
     @media (min-width: 576px)
       text-align: left
     @media (min-width: 992px)
@@ -227,6 +229,8 @@
   text-align: center
   &__logo
     margin-bottom: 1rem
+    &:hover, &:active
+      text-decoration: none
     @media (min-width: 575px)
       margin-bottom: 0
     img
@@ -252,3 +256,43 @@
     a
       color: lighten($orange, 20%)
       text-decoration: none
+
+.contact-form
+  background-color: $cold-white
+  padding: 1.5rem 0
+  &__heading
+    text-align: center
+    text-transform: uppercase
+    font-family: $montserrat
+    font-size: .8rem
+    font-weight: 300
+    color: $light-grey
+    margin-bottom: 1rem
+    @media (min-width: 992px)
+      font-size: 1.3rem
+      margin-top: 1.5rem
+      margin-bottom: 2rem
+  &__form
+    margin: 0
+    input, textarea
+      width: 100%
+      font-family: $montserrat
+      font-size: .8rem
+      color: $light-grey
+      padding: .5rem 1rem
+      margin-bottom: 1rem
+      border: none
+    button
+      margin: 0 auto
+      border: none
+      padding: .5rem 1rem
+      background-color: $orange
+      text-transform: uppercase
+      color: $warm-white
+      text-decoration: none
+      transition: all .3s ease
+      &:hover, &:active
+        background-color: $warm-white
+        color: $orange
+        border: none
+        outline: none
