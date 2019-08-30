@@ -44,7 +44,7 @@ gulp.task('serve', callback => {
 
 // Watch files for changes
 gulp.task('watch', callback => {
-  gulp.watch('./src/*.html', gulp.series('copyHtml'));
+  gulp.watch('./src/html/*.html', gulp.series('copyHtml'));
   gulp.watch('./src/ts/**/*.ts', gulp.series('ts-build'));
   gulp.watch('./src/sass/**/*.{sass,scss}', gulp.series('sass-build'));
   gulp.watch('./src/**/*', browserSync.reload)
