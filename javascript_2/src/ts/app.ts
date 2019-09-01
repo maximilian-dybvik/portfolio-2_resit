@@ -159,3 +159,44 @@ const animate = function () {
 // Initial init and animate calls
 init()
 animate()
+
+
+
+
+
+
+let minRadiusSlider = (document.getElementById("minRadiusSlider") as HTMLInputElement)
+let minRadiusValue = (document.getElementById("minRadiusValue") as HTMLInputElement)
+minRadiusValue.innerHTML = minRadiusSlider.value
+minRadiusSlider.oninput = () => {
+  minRadiusValue.innerHTML = minRadiusSlider.value
+  config.minRadius = parseInt(minRadiusSlider.value)
+  init()
+}
+
+let maxRadiusSlider = (document.getElementById("maxRadiusSlider") as HTMLInputElement)
+let maxRadiusValue = (document.getElementById("maxRadiusValue") as HTMLInputElement)
+maxRadiusValue.innerHTML = maxRadiusSlider.value
+maxRadiusSlider.oninput = () => {
+  maxRadiusValue.innerHTML = maxRadiusSlider.value
+  config.maxRadius = parseInt(maxRadiusSlider.value)
+  init()
+}
+
+let growthFactorSlider = (document.getElementById("growthFactorSlider") as HTMLInputElement)
+let growthFactorValue = (document.getElementById("growthFactorValue") as HTMLInputElement)
+growthFactorValue.innerHTML = growthFactorSlider.value
+growthFactorSlider.oninput = () => {
+  growthFactorValue.innerHTML = growthFactorSlider.value
+  config.growthFactor = parseInt(growthFactorSlider.value)
+  init()
+}
+
+let growthRateSlider = (document.getElementById("growthRateSlider") as HTMLInputElement)
+let growthRateValue = (document.getElementById("growthRateValue") as HTMLInputElement)
+growthRateValue.innerHTML = growthRateSlider.value
+growthRateSlider.oninput = () => {
+  growthRateValue.innerHTML = growthRateSlider.value
+  config.growthRate = parseInt(growthRateSlider.value)
+  init()
+}

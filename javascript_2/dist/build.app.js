@@ -126,3 +126,12 @@ var animate = function () {
 // Initial init and animate calls
 init();
 animate();
+var minRadiusSlider = document.getElementById("minRadiusSlider");
+var minRadiusValue = document.getElementById("minRadiusValue");
+minRadiusValue.innerHTML = minRadiusSlider.value;
+minRadiusSlider.oninput = function () {
+    minRadiusValue.innerHTML = minRadiusSlider.value;
+    config.minRadius = parseInt(minRadiusSlider.value);
+    init();
+};
+console.log(minRadiusSlider.value);

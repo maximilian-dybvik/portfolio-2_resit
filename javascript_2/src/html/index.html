@@ -9,6 +9,52 @@
 </head>
 <body>
   <canvas class="canvas"></canvas>
+  <aside class="config">
+    <h3>Min size</h3>
+    <input id="minRadiusSlider" class="slider" type="range" min="1" max="100" value="1">
+    <span id="minRadiusValue"></span>
+    
+    <h3>Max size</h3>
+    <input id="maxRadiusSlider" class="slider" type="range" min="1" max="100" value="5">
+    <span id="maxRadiusValue"></span>
+    
+    <h3>Growth factor</h3>
+    <input id="growthFactorSlider" class="slider" type="range" min="0" max="10" value="5">
+    <span id="growthFactorValue"></span>
+    
+    <h3>Growth rate</h3>
+    <input id="growthRateSlider" class="slider" type="range" min="1" max="10" value="2">
+    <span id="growthRateValue"></span>
+    
+    <h3>Interaction radius</h3>
+    <input id="interactionRadiusSlider" class="slider" type="range" min="0" max="100" value="50">
+    <span id="interactionRadiusValue"></span>
+    
+    <h3>Min velocity</h3>
+    <input id="minVelocitySlider" class="slider" type="range" min="1" max="10" value="0">
+    <span id="minVelocityValue"></span>
+    
+    <h3>Max velocity</h3>
+    <input id="maxVelocitySlider" class="slider" type="range" min="1" max="10" value="1">
+    <span id="maxVelocityValue"></span>
+    
+    <h3>Density</h3>
+    <input id="densitySlider" class="slider" type="range" min="1" max="1000" value="800">
+    <span id="densityValue"></span>
+
+    <h3>Stroke</h3>
+    <input id="strokeCheckbox" class="checkbox" type="checkbox">
+    <span class="checkmark"></span>
+
+    <h3>Stroke width</h3>
+    <input id="strokeWidthSlider" class="slider" type="range" min="0" max="20" value="2">
+    <span id="strokeWidthValue"></span>
+
+    <h3>Stroke color</h3>
+    <input id="strokeColorInput" class="input" type="text" value="#fffdfa">
+
+  </aside>
+  
   <script src="build.app.js"></script>
 </body>
 </html>
