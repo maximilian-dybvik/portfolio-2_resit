@@ -126,6 +126,7 @@ var animate = function () {
 // Initial init and animate calls
 init();
 animate();
+// Handle sliders and dynamically change each slider value
 var minRadiusSlider = document.getElementById("minRadiusSlider");
 var minRadiusValue = document.getElementById("minRadiusValue");
 minRadiusValue.innerHTML = minRadiusSlider.value;
@@ -134,4 +135,82 @@ minRadiusSlider.oninput = function () {
     config.minRadius = parseInt(minRadiusSlider.value);
     init();
 };
-console.log(minRadiusSlider.value);
+var maxRadiusSlider = document.getElementById("maxRadiusSlider");
+var maxRadiusValue = document.getElementById("maxRadiusValue");
+maxRadiusValue.innerHTML = maxRadiusSlider.value;
+maxRadiusSlider.oninput = function () {
+    maxRadiusValue.innerHTML = maxRadiusSlider.value;
+    config.maxRadius = parseInt(maxRadiusSlider.value);
+    init();
+};
+var growthFactorSlider = document.getElementById("growthFactorSlider");
+var growthFactorValue = document.getElementById("growthFactorValue");
+growthFactorValue.innerHTML = growthFactorSlider.value;
+growthFactorSlider.oninput = function () {
+    growthFactorValue.innerHTML = growthFactorSlider.value;
+    config.growthFactor = parseInt(growthFactorSlider.value);
+    init();
+};
+var growthRateSlider = document.getElementById("growthRateSlider");
+var growthRateValue = document.getElementById("growthRateValue");
+growthRateValue.innerHTML = growthRateSlider.value;
+growthRateSlider.oninput = function () {
+    growthRateValue.innerHTML = growthRateSlider.value;
+    config.growthRate = parseInt(growthRateSlider.value);
+    init();
+};
+var interactionRadiusSlider = document.getElementById("interactionRadiusSlider");
+var interactionRadiusValue = document.getElementById("interactionRadiusValue");
+interactionRadiusValue.innerHTML = interactionRadiusSlider.value;
+interactionRadiusSlider.oninput = function () {
+    interactionRadiusValue.innerHTML = interactionRadiusSlider.value;
+    config.interactionRadius = parseInt(interactionRadiusSlider.value);
+    init();
+};
+var minVelocitySlider = document.getElementById("minVelocitySlider");
+var minVelocityValue = document.getElementById("minVelocityValue");
+minVelocityValue.innerHTML = minVelocitySlider.value;
+minVelocitySlider.oninput = function () {
+    minVelocityValue.innerHTML = minVelocitySlider.value;
+    config.minVelocity = parseInt(minVelocitySlider.value);
+    init();
+};
+var maxVelocitySlider = document.getElementById("maxVelocitySlider");
+var maxVelocityValue = document.getElementById("maxVelocityValue");
+maxVelocityValue.innerHTML = maxVelocitySlider.value;
+maxVelocitySlider.oninput = function () {
+    maxVelocityValue.innerHTML = maxVelocitySlider.value;
+    config.maxVelocity = parseInt(maxVelocitySlider.value);
+    init();
+};
+var densitySlider = document.getElementById("densitySlider");
+var densityValue = document.getElementById("densityValue");
+densityValue.innerHTML = densitySlider.value;
+densitySlider.oninput = function () {
+    densityValue.innerHTML = densitySlider.value;
+    config.density = parseInt(densitySlider.value);
+    init();
+};
+var strokeCheckbox = document.getElementById("strokeCheckbox");
+strokeCheckbox.oninput = function () {
+    config.stroke = strokeCheckbox.checked;
+    init();
+};
+var strokeWidthSlider = document.getElementById("strokeWidthSlider");
+var strokeWidthValue = document.getElementById("strokeWidthValue");
+strokeWidthValue.innerHTML = strokeWidthSlider.value;
+strokeWidthSlider.oninput = function () {
+    strokeWidthValue.innerHTML = strokeWidthSlider.value;
+    config.strokeWidth = parseInt(strokeWidthSlider.value);
+    init();
+};
+var strokeColorInput = document.getElementById("strokeColorInput");
+strokeColorInput.oninput = function () {
+    config.strokeColor = strokeColorInput.value;
+    init();
+};
+var shapeSelect = document.getElementById("shapeSelect");
+shapeSelect.oninput = function () {
+    config.shape = shapeSelect.value;
+    init();
+};

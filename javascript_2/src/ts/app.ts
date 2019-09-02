@@ -160,11 +160,7 @@ const animate = function () {
 init()
 animate()
 
-
-
-
-
-
+// Handle sliders and dynamically change each slider value
 let minRadiusSlider = (document.getElementById("minRadiusSlider") as HTMLInputElement)
 let minRadiusValue = (document.getElementById("minRadiusValue") as HTMLInputElement)
 minRadiusValue.innerHTML = minRadiusSlider.value
@@ -198,5 +194,68 @@ growthRateValue.innerHTML = growthRateSlider.value
 growthRateSlider.oninput = () => {
   growthRateValue.innerHTML = growthRateSlider.value
   config.growthRate = parseInt(growthRateSlider.value)
+  init()
+}
+
+let interactionRadiusSlider = (document.getElementById("interactionRadiusSlider") as HTMLInputElement)
+let interactionRadiusValue = (document.getElementById("interactionRadiusValue") as HTMLInputElement)
+interactionRadiusValue.innerHTML = interactionRadiusSlider.value
+interactionRadiusSlider.oninput = () => {
+  interactionRadiusValue.innerHTML = interactionRadiusSlider.value
+  config.interactionRadius = parseInt(interactionRadiusSlider.value)
+  init()
+}
+
+let minVelocitySlider = (document.getElementById("minVelocitySlider") as HTMLInputElement)
+let minVelocityValue = (document.getElementById("minVelocityValue") as HTMLInputElement)
+minVelocityValue.innerHTML = minVelocitySlider.value
+minVelocitySlider.oninput = () => {
+  minVelocityValue.innerHTML = minVelocitySlider.value
+  config.minVelocity = parseInt(minVelocitySlider.value)
+  init()
+}
+
+let maxVelocitySlider = (document.getElementById("maxVelocitySlider") as HTMLInputElement)
+let maxVelocityValue = (document.getElementById("maxVelocityValue") as HTMLInputElement)
+maxVelocityValue.innerHTML = maxVelocitySlider.value
+maxVelocitySlider.oninput = () => {
+  maxVelocityValue.innerHTML = maxVelocitySlider.value
+  config.maxVelocity = parseInt(maxVelocitySlider.value)
+  init()
+}
+
+let densitySlider = (document.getElementById("densitySlider") as HTMLInputElement)
+let densityValue = (document.getElementById("densityValue") as HTMLInputElement)
+densityValue.innerHTML = densitySlider.value
+densitySlider.oninput = () => {
+  densityValue.innerHTML = densitySlider.value
+  config.density = parseInt(densitySlider.value)
+  init()
+}
+
+let strokeCheckbox = (document.getElementById("strokeCheckbox") as HTMLInputElement)
+strokeCheckbox.oninput = () => {
+  config.stroke = strokeCheckbox.checked
+  init()
+}
+
+let strokeWidthSlider = (document.getElementById("strokeWidthSlider") as HTMLInputElement)
+let strokeWidthValue = (document.getElementById("strokeWidthValue") as HTMLInputElement)
+strokeWidthValue.innerHTML = strokeWidthSlider.value
+strokeWidthSlider.oninput = () => {
+  strokeWidthValue.innerHTML = strokeWidthSlider.value
+  config.strokeWidth = parseInt(strokeWidthSlider.value)
+  init()
+}
+
+let strokeColorInput = (document.getElementById("strokeColorInput") as HTMLInputElement)
+strokeColorInput.oninput = () => {
+  config.strokeColor = strokeColorInput.value
+  init()
+}
+
+let shapeSelect = (document.getElementById("shapeSelect") as HTMLInputElement)
+shapeSelect.oninput = () => {
+  config.shape = shapeSelect.value
   init()
 }
