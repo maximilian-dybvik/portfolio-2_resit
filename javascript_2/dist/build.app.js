@@ -214,3 +214,17 @@ shapeSelect.oninput = function () {
     config.shape = shapeSelect.value;
     init();
 };
+// Toggles Config Panel open/closed
+var isPanelToggled = false;
+var panelToggler = document.getElementById("panelToggler");
+panelToggler.addEventListener('click', function () {
+    var configPanel = document.getElementById("configPanel");
+    if (isPanelToggled) {
+        configPanel.classList.remove("config--active");
+        isPanelToggled = !isPanelToggled;
+    }
+    else {
+        configPanel.classList.add("config--active");
+        isPanelToggled = !isPanelToggled;
+    }
+});

@@ -1,25 +1,47 @@
 @import "reset"
 
+html, body
+  overflow: hidden
+
 .canvas
   position: absolute
   top: 0
   left: 0
   background-color: #f2f2f2
 
-.config
+#panelToggler
+  cursor: pointer
+  height: 3rem
+  width: 20rem
   position: absolute
   top: 0
+  right: 0
+  z-index: 10
+  text-align: center
+  line-height: 3rem
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+  font-weight: 600
+  color: #fffdfa
+  background-color: #02bacf
+
+.config
+  width: 20rem
+  position: absolute
+  top: -750px
   right: 0
   padding: 1rem 2rem
   background-color: hsla(0, 0%, 0%, 0.8)
   color: #f2f2f2
+  transition: top .5s
+  &--active
+    top: 3rem
   h3, span
     font-family: Verdana, Geneva, Tahoma, sans-serif
     font-size: 1rem
     font-weight: 400
   .slider
     appearance: none
-    width: auto
+    width: 75%
     height: .2rem
     background: #fffdfa
     outline: none
@@ -43,9 +65,9 @@
     outline: none
     border: none
     background-color: #fffdfa
+  .input, .checkbox, .select
+    margin-bottom: 1rem
     opacity: .7
     transition: opacity .2s
     &:hover, &:focus
       opacity: 1
-  .input, .checkbox, .select
-    margin-bottom: 1rem

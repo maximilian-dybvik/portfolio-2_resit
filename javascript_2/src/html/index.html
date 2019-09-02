@@ -9,25 +9,26 @@
 </head>
 <body>
   <canvas class="canvas"></canvas>
-  <aside class="config">
+  <span id="panelToggler">Toggle Config Panel</span>
+  <aside id="configPanel" class="config">
     <h3>Min size</h3>
     <input id="minRadiusSlider" class="slider" type="range" min="1" max="100" value="1">
     <span id="minRadiusValue"></span>
     
     <h3>Max size</h3>
-    <input id="maxRadiusSlider" class="slider" type="range" min="1" max="100" value="5">
+    <input id="maxRadiusSlider" class="slider" type="range" min="1" max="100" value="8">
     <span id="maxRadiusValue"></span>
     
     <h3>Growth factor</h3>
-    <input id="growthFactorSlider" class="slider" type="range" min="0" max="10" value="5">
+    <input id="growthFactorSlider" class="slider" type="range" min="1" max="10" value="3">
     <span id="growthFactorValue"></span>
     
     <h3>Growth rate</h3>
-    <input id="growthRateSlider" class="slider" type="range" min="1" max="10" value="2">
+    <input id="growthRateSlider" class="slider" type="range" min="1" max="10" value="5">
     <span id="growthRateValue"></span>
     
     <h3>Interaction radius</h3>
-    <input id="interactionRadiusSlider" class="slider" type="range" min="0" max="100" value="50">
+    <input id="interactionRadiusSlider" class="slider" type="range" min="0" max="100" value="80">
     <span id="interactionRadiusValue"></span>
     
     <h3>Min velocity</h3>
@@ -39,7 +40,7 @@
     <span id="maxVelocityValue"></span>
     
     <h3>Density</h3>
-    <input id="densitySlider" class="slider" type="range" min="1" max="3000" value="800">
+    <input id="densitySlider" class="slider" type="range" min="1" max="3000" value="1000">
     <span id="densityValue"></span>
 
     <h3>Stroke</h3>

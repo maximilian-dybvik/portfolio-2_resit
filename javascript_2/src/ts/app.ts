@@ -259,3 +259,17 @@ shapeSelect.oninput = () => {
   config.shape = shapeSelect.value
   init()
 }
+
+// Toggles Config Panel open/closed
+let isPanelToggled: boolean = false
+let panelToggler = (document.getElementById("panelToggler") as HTMLInputElement)
+panelToggler.addEventListener('click', () => {
+  let configPanel = (document.getElementById("configPanel") as HTMLInputElement)
+  if (isPanelToggled) {
+    configPanel.classList.remove("config--active")
+    isPanelToggled = !isPanelToggled
+  } else {
+    configPanel.classList.add("config--active")
+    isPanelToggled = !isPanelToggled
+  }
+})
