@@ -62,8 +62,12 @@ var Shape = function (x, y, xv, yv, radius, colors) {
         if (config.shape === 'square') {
             ctx.rect(_this.x, _this.y, _this.radius * 2, _this.radius * 2);
         }
-        else {
+        else if (config.shape === 'circle') {
             ctx.arc(_this.x, _this.y, _this.radius, 0, Math.PI * 2, false);
+        }
+        else {
+            var img = document.getElementById('nick');
+            ctx.drawImage(img, _this.x, _this.y, _this.radius * 2, _this.radius * 2);
         }
         // Checks config object whether stroke is true or false
         if (config.stroke) {

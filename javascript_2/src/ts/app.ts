@@ -85,8 +85,11 @@ const Shape = function (x, y, xv, yv, radius, colors) {
     // Determine what shape to draw on canvas
     if (config.shape === 'square') {
       ctx.rect(this.x, this.y, this.radius * 2, this.radius * 2)
-    } else {
+    } else if (config.shape === 'circle') {
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false)
+    } else {
+      let img = (document.getElementById('nick') as HTMLImageElement)
+      ctx.drawImage(img, this.x, this.y, this.radius * 2, this.radius * 2)
     }
     // Checks config object whether stroke is true or false
     if (config.stroke) {
