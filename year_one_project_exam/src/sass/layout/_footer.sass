@@ -1,0 +1,39 @@
+footer
+  width: 100%
+  background: linear-gradient(#0D0224, #331036)
+
+  .wrapper
+    padding: 3rem
+    display: grid
+    grid-template-columns: 50% 50%
+
+  @media screen and (min-width: 1024px)
+    .wrapper
+      padding: 3rem 0
+
+#company-info
+  text-align: left
+
+  h3
+    color: $pink
+    margin-bottom: 1em
+    line-height: 1.3em
+
+#footer-menu
+  +font-header
+  text-align: right
+  text-transform: uppercase
+  white-space: nowrap
+
+  ul li
+    margin-bottom: 1em
+    line-height: 1.3em
+
+    &:last-of-type
+      margin-bottom: 0
+
+  a
+    transition: ease .4s
+
+    &:hover, &:active
+      color: $pink

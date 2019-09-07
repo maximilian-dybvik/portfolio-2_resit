@@ -1,0 +1,38 @@
+nav
+  width: 100%
+  position: absolute
+  top: 0
+  left: 0
+  padding: 1rem 0
+  z-index: 5
+  text-align: center
+
+  ul
+    margin: 0 auto
+
+  ul li
+    +font-header
+    display: inline
+
+  li
+    margin: 0 .5rem
+
+    &:first-of-type
+      margin-left: 0
+    &:last-of-type
+      margin-right: 0
+
+  @media screen and (min-width: 375px)
+    li
+      margin: 0 1rem
+
+      &:last-of-type
+        margin-right: 0
+
+  a
+    transition: ease .4s
+    text-transform: uppercase
+    white-space: nowrap
+
+    &:hover, &:active
+      color: $pink

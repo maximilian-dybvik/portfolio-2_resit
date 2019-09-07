@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css?family=Monoton|Open+Sans|Orbitron:400,700")
+
+
+// Typography mixins
+=font-logo
+  font-family: "Monoton", monospace
+  text-transform: uppercase
+
+=font-header
+  font-family: "Orbitron", monospace
+
+=font-body
+  font-family: "Open Sans", sans-serif
+
+// Global reset
+h1
+  +font-logo
+
+h2, h3, h4, h5, h6
+  +font-header
+
+p
+  +font-body
+
+// Typographical scale/vertical rhythm
+html, .root
+  font-size: 12px
+  line-height: 19px
+
+  @media screen and (min-width: 760px)
+    font-size: 14px
+    line-height: 22px
+
+  @media screen and (min-width: 1020px)
+    font-size: 16px
+    line-height: 26px
+
+h1, .h1
+  font-size: 4.6666667rem
+
+h2, .h2
+  font-size: 2.75rem
+
+h3, .h3
+  font-size: 1.6666667rem
+
+h4, .h4
+  font-size: 1rem
+
+h5, .h5
+  font-size: 1rem

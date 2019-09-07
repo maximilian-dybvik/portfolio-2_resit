@@ -1,0 +1,52 @@
+doctype html
+html
+  include ../layout/head.pug
+    
+  body
+    include ../layout/navigation.pug
+    
+    header.index
+      #particles-js
+      h1 SPACE-X
+      
+      //- #index-header acts as a array of strings which typed.js uses for the animation and will not be visible
+      #index-header
+        h2 Making Life 
+        h2 Multiplanetary
+      //- #index-header-typed is where typed.js inserts the animated string
+      span#index-header-typed
+      
+      a(href="#mars-article")
+        include ../components/scroll-down-icon.pug
+    
+    section.index
+      article#mars-article
+        h2 MARS:
+        h3 Picturesque and <br> closer than ever
+        p In 2022 our spacecraft BFR (Big Falcon Rocket) will head towards the Red Planet, Mars. As of today only 18 missions have been successful, however, we are about to change that. In 2022 our spacecraft filled with cargo is ready for take-off, with a mission to establish resources and sort out initial power, mining and infrastructure. <br><br> 2024 is the year our spacecraft will include people, alongside cargo. This time, to build a propellant depot and our first base on Mars. We are now preparing for a future cosmopolitan society on our neighbour, the Red Planet.
+        button(type="button" onclick="location.href='bfr.html';" value="Go to the big falcon rocket info page")
+          h4 More about BFR
+      
+        .video-container  
+          iframe(width="560" height="315" src="https://www.youtube.com/embed/Ndpxuf-uJHE?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+        
+      #newsletter-signup
+        h2 Get updated
+        h3 Recieve our newsletter
+        form(onsubmit="return false")#my-form
+          label(for="email") @
+          input(type="email" placeholder="Enter email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required)#email-input
+          button(type="submit" onclick="formValidation()")#submit SUBMIT
+          
+        .video-container  
+          iframe(width="560" height="315" src="https://www.youtube.com/embed/Ndpxuf-uJHE?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+      
+    include ../layout/footer.pug
+    
+    //- Scripts
+    script(src="js/vendors/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8")
+    script(src="js/vendors/typed.min.js" type="text/javascript" charset="utf-8")
+    script(src="js/vendors/particles.min.js" type="text/javascript" charset="utf-8")
+    script(src="js/vendors/smooth-scroll.polyfills.min.js" type="text/javascript" charset="utf-8")
+    script(src="js/index.js" type="text/javascript" charset="utf-8")
+  

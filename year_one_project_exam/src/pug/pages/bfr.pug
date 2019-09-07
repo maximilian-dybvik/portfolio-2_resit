@@ -1,0 +1,55 @@
+doctype html
+html
+  include ../layout/head.pug
+    
+  body
+    include ../layout/navigation.pug
+    
+    header.bfr
+      #particles-js
+      
+      //- #bfr-header acts as a array of strings which typed.js uses for the animation and will not be visible
+      #bfr-header
+        h2 BFR DATA
+      //- #bfr-header-typed is where typed.js inserts the animated string
+      span#bfr-header-typed
+    
+      a(href="#bfr-article")
+        include ../components/scroll-down-icon.pug
+      
+    section.bfr
+      article#bfr-article
+        
+      aside#bfr-data
+        h2 specs
+        h4 id: 
+          span#specs-id
+        h4 name:  
+          span#specs-name
+        h4 country: 
+          span#specs-country
+        h4 company: 
+          span#specs-company
+        br
+        h5 diameter:
+        span#specs-diameter
+        br
+        h5 height:
+        span#specs-height
+        br
+        h5 mass:
+        span#specs-mass
+        br
+        h5 payload weights:
+        span#specs-leo
+        br
+        h5 cost per launch:
+        span#specs-cost
+    
+    include ../layout/footer.pug
+    
+    //- Scripts
+    script(src="js/vendors/typed.min.js" type="text/javascript" charset="utf-8")
+    script(src="js/vendors/particles.min.js" type="text/javascript" charset="utf-8")
+    script(src="js/vendors/smooth-scroll.polyfills.min.js" type="text/javascript" charset="utf-8")
+    script(src="js/bfr.js" type="text/javascript" charset="utf-8")

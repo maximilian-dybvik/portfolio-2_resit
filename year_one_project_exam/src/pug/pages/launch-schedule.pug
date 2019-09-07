@@ -1,0 +1,76 @@
+doctype html
+html
+  include ../layout/head.pug
+    
+  body
+    include ../layout/navigation.pug
+    
+    header.schedule
+      #particles-js
+      
+      //- #bfr-header acts as a array of strings which typed.js uses for the animation and will not be visible
+      #schedule-header
+        h2 Schedule
+      //- #bfr-header-typed is where typed.js inserts the animated string
+      span#schedule-header-typed
+    
+      a(href="#latest")
+        include ../components/scroll-down-icon.pug
+      
+    main.schedule
+      section#latest
+        h3 latest launch
+        h4 flight number: 
+          span#latest-number
+        h4 mission name:  
+          span#latest-name
+        h4 rocket: 
+          span#latest-rocket
+        h4 launch date: 
+          span#latest-date
+        h4 launch success: 
+          span#latest-success
+        br
+        h5 mission details:
+        p#latest-details
+        br
+        h4 launch video:
+        .video-container 
+          iframe(width="560" height="315" src="https://www.youtube.com/embed/2hcM5hqQ45s?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+          
+        h5 links:
+        a(href="#" value="Download mission presskit")#latest-presskit
+          h5 presskit
+        a(href="#" value="Go to reddit launch campaign")#latest-reddit
+          h5 reddit campaign
+        
+      section#next
+        h3 next launch
+        h4 flight number: 
+          span#next-number
+        h4 mission name:  
+          span#next-name
+        h4 rocket: 
+          span#next-rocket
+        h4 launch date: 
+          span#next-date
+        h4 launch success: 
+          span#next-success
+        br
+        h5 mission details:
+        p#next-details
+        br
+        
+        h5 links:
+        a(href="#" value="Download mission presskit")#next-presskit
+          h5 presskit
+        a(href="#" value="Go to reddit launch campaign")#next-reddit
+          h5 reddit campaign
+    
+    include ../layout/footer.pug
+    
+    //- Scripts
+    script(src="js/vendors/typed.min.js" type="text/javascript" charset="utf-8")
+    script(src="js/vendors/particles.min.js" type="text/javascript" charset="utf-8")
+    script(src="js/vendors/smooth-scroll.polyfills.min.js" type="text/javascript" charset="utf-8")
+    script(src="js/launchSchedule.js" type="text/javascript" charset="utf-8")
