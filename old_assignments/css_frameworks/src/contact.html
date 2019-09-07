@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Frameworks - Course Assignment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap Dependencies -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-default header">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand header__brand">January Island Escapes</a>
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html" class="header__anchor">Home</a></li>
+                        <li><a href="about.html" class="header__anchor">About</a></li>
+                        <li><a href="contact.html" class="header__anchor header__anchor--last">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Carousel -->
+    <div class="container carousel">
+        <div class="carousel slide" data-ride="carousel" id="featured-images">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="images/banner1.jpg" alt="January island escapes" class="carousel__image">
+                </div>
+                <div class="item">
+                    <img src="images/banner2.jpg" alt="Find your perfect island" class="carousel__image">
+                </div>
+                <div class="item">
+                    <img src="images/banner3.jpg" alt="At a click of a button" class="carousel__image">
+                </div>
+            </div>
+    
+            <!-- Carousel dot-navigation -->
+            <ol class="carousel-indicators">
+                <li class="active" data-target="#featured-images" data-slide-to="0"></li>
+                <li data-target="#featured-images" data-slide-to="1"></li>
+                <li data-target="#featured-images" data-slide-to="2"></li>
+            </ol>
+    
+            <!-- Carousel next/prev controls -->
+            <a href="#featured-images" class="left carousel-control" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+    
+            <a href="#featured-images" class="right carousel-control" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+
+    <form class="container siteForm">
+        <div class="form-group">
+            <label for="name" class="siteForm__label">Name</label>
+            <input type="email" class="form-control siteForm__inputField" id="name">
+        </div>
+        <div class="form-group">
+            <label for="lastName" class="siteForm__label">Last Name</label>
+            <input type="text" class="form-control siteForm__inputField" id="lastName">
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber" class="siteForm__label">Telephone Number</label>
+            <input type="number" class="form-control siteForm__inputField" id="phoneNumber">
+        </div>
+        <div class="form-group">
+            <label for="mailInput" class="siteForm__label">Email</label>
+            <input type="email" class="form-control siteForm__inputField" id="mailInput">
+        </div>
+        <button type="submit" class="btn siteForm__btn">Contact Us</button>
+    </form>
+
+    <!-- Footer -->
+    <footer class="container-fluid footer">
+        <h6 class="footer__copyright">Copyright 2018 Noroff</h6>
+    </footer>
+</body>
+</html>

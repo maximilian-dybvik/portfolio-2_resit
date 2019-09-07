@@ -1,0 +1,20 @@
+.header
+    background-color: $primaryBlue
+    padding: 2rem 0
+    margin-bottom: 0
+    border: none
+    border-radius: 0
+
+    &__brand
+        +fontSize(48) // Parameter value is in px units will convert to rem 
+        font-weight: bold
+
+    &__anchor
+        +fontSize(24) // Parameter value is in px units will convert to rem
+        border-right: 1px solid $white
+        margin: 15px 0 15px 15px
+        padding: 0 15px 0 0 !important
+
+        &--last
+            border: none
+            padding-right: 0 !important

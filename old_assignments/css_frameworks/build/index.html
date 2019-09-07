@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Frameworks - Course Assignment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap Dependencies -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-default header">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand header__brand">January Island Escapes</a>
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html" class="header__anchor">Home</a></li>
+                        <li><a href="about.html" class="header__anchor">About</a></li>
+                        <li><a href="contact.html" class="header__anchor header__anchor--last">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Carousel -->
+    <div class="container carousel">
+        <div class="carousel slide" data-ride="carousel" id="featured-images">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="images/banner1.jpg" alt="January island escapes" class="carousel__image">
+                </div>
+                <div class="item">
+                    <img src="images/banner2.jpg" alt="Find your perfect island" class="carousel__image">
+                </div>
+                <div class="item">
+                    <img src="images/banner3.jpg" alt="At a click of a button" class="carousel__image">
+                </div>
+            </div>
+    
+            <!-- Carousel dot-navigation -->
+            <ol class="carousel-indicators">
+                <li class="active" data-target="#featured-images" data-slide-to="0"></li>
+                <li data-target="#featured-images" data-slide-to="1"></li>
+                <li data-target="#featured-images" data-slide-to="2"></li>
+            </ol>
+    
+            <!-- Carousel next/prev controls -->
+            <a href="#featured-images" class="left carousel-control" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+    
+            <a href="#featured-images" class="right carousel-control" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Main content -->
+    <main class="container mainSection">
+        <div class="row">
+            <div class="col-sm-8 mainSection__copy">
+                <div class="mainSection__copy__container">
+                    <h1>Welcome to January Island Escapes</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra lectus quis pulvinar molestie. Sed vehicula mollis augue. Maecenas sed justo vel dolor finibus lobortis. Nunc semper diam a lacus cursus vulputate. Mauris quis leo at lorem finibus pretium vitae id magna. Ut sit amet orci non est maximus fringilla et nec enim. Phasellus dui diam, ultricies id dui sed, tristique congue justo.
+                    <br>
+                    <br>
+                    Curabitur euismod eleifend tellus non molestie. In ultrices sit amet sapien sed molestie. Suspendisse sit amet risus vitae nibh bibendum consectetur. Sed hendrerit purus nisl, a fermentum lorem finibus et. Nullam ac ornare lectus. Donec ut neque sed neque rutrum ullamcorper. Nunc rutrum metus at dolor imperdiet tincidunt. Sed vitae nisl at nisi semper rutrum pharetra a est. Donec dapibus, libero sed laoreet vulputate, lorem justo interdum metus, id condimentum sem metus ut turpis. Fusce porttitor purus vel nisl feugiat, eget accumsan sapien vehicula. Curabitur nisi lacus, ullamcorper quis libero at, pulvinar vehicula lacus. Maecenas quis arcu et dui consequat luctus ac ac sapien. Mauris euismod pharetra diam, vitae tristique dolor fringilla et.
+                    <br>
+                    <br>
+                    Quisque sit amet consectetur arcu. Nulla bibendum, sapien nec fermentum elementum, arcu turpis hendrerit enim, ac sollicitudin risus odio ac ligula. Nam iaculis ligula eget sem malesuada vulputate. Proin sagittis vulputate dui a imperdiet. Morbi faucibus velit non neque laoreet, ut pharetra metus fermentum. Mauris nunc dolor, cursus et ante eu, pretium hendrerit elit. Sed tincidunt, eros sit amet luctus porttitor, risus nibh iaculis metus, gravida malesuada massa elit sit amet lacus. Phasellus commodo et est at molestie. Morbi congue dui at justo auctor, eu congue odio lobortis. Nam ut luctus magna. Donec volutpat tempus fringilla. In efficitur ipsum ultrices ligula ullamcorper commodo. Nunc eu orci nec metus congue luctus. Maecenas in tellus eget libero placerat fermentum scelerisque id sem.
+                    <br>
+                    <br>
+                    Aliquam luctus ex at sem malesuada accumsan. Vestibulum posuere volutpat dolor, gravida faucibus lorem lobortis eu. Proin fringilla, turpis feugiat lobortis sagittis, ipsum sem gravida ex, bibendum aliquam eros arcu eget nibh. Nulla eget massa ac lorem aliquam finibus ut ut diam. Duis sit amet orci commodo, consectetur turpis ut, pulvinar velit. Integer ullamcorper vestibulum velit sit amet consequat. Fusce lobortis pellentesque dolor, ut semper purus pretium a. Suspendisse potenti. Aliquam a pretium est, vitae dapibus elit. Integer ornare faucibus lorem vitae aliquam. In id rutrum justo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    <br>
+                    <br>
+                    Proin tempor turpis commodo pulvinar pharetra. Donec vel nisi blandit, tincidunt urna quis, tincidunt nibh. In iaculis, ex dignissim fermentum porta, est leo vehicula diam, ut malesuada dolor ipsum ac mi. Mauris nulla diam, aliquam quis condimentum et, tempus in quam. Mauris eu mi nisi. Morbi varius sodales dui. Pellentesque id mi vel libero ultrices viverra ac id elit. In sit amet eros convallis, venenatis nisi quis, euismod dui. Mauris eu lacus nunc. Etiam suscipit eleifend imperdiet. Cras aliquam condimentum lacus, ut tincidunt ex tincidunt vitae. Nulla suscipit arcu a enim tincidunt, nec porttitor est feugiat. Maecenas laoreet metus a enim varius, ut vestibulum erat interdum. Pellentesque posuere odio sem, eu euismod velit eleifend ut. Donec venenatis consectetur sem ut bibendum.</p>
+                </div>
+            </div>
+            <div class="col-sm-4 mainSection__right">
+                <div class="mainSection__right__container">
+                    <img src="images/lighthouse.jpg" alt="Image of a lighthouse" class="mainSection__right__image">
+                    <a href="index.html" class="mainSection__right__anchor">Home</a>
+                    <br>
+                    <a href="about.html" class="mainSection__right__anchor">About</a>
+                    <br>
+                    <a href="contact.html" class="mainSection__right__anchor mainSection__right__anchor--last">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container-fluid footer">
+        <h6 class="footer__copyright">Copyright 2018 Noroff</h6>
+    </footer>
+</body>
+</html>
