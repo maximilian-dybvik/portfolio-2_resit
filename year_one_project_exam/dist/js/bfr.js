@@ -1,23 +1,7 @@
-// PARTICLES EFFECT
-particlesJS.load('particles-js', '/js/vendors/particles.json');
-
-// SMOOTH SCROLL
-var scroll = new SmoothScroll('a[href*="#"]');
-
-// TYPED ANIMATION
-var typed = new Typed('#bfr-header-typed', {
-  stringsElement: '#bfr-header',
-  startDelay: 500,
-  typeSpeed: 60,
-  backDelay: 500,
-  backSpeed: 50,
-  showCursor: false,
-});
-
 // BFR INFORMATION
 fetch("https://api.spacexdata.com/v2/rockets/bfr")
   .then(response => response.json())
-  .then(data => { bfrData(data) })
+  .then(data => bfrData(data))
   .catch(err => console.log(err));
 
 // Function for displaying BFR data
@@ -41,7 +25,6 @@ function bfrData(data) {
     article.appendChild(p);
   }
 
-  console.log(data);
   // Display BFR specs
   {
     document.getElementById("specs-id").innerHTML = data.id;
@@ -58,9 +41,3 @@ function bfrData(data) {
     document.getElementById("specs-cost").innerHTML = "$ " + (data.cost_per_launch / 100000) + " millions = 1,776 Student loans";
   }
 };
-
-// SPACEX HISTORY
-fetch("https://api.spacexdata.com/v2/info/history")
-  .then(response => response.json())
-  .then(data => { console.log(data) })
-  .catch(err => console.log(err));

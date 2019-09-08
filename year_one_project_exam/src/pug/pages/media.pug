@@ -8,13 +8,11 @@ html
     include ../layout/navigation.pug
     
     header.media
-      #particles-js
-    
       //- #media-header acts as a array of strings which typed.js uses for the animation and will not be visible
-      #media-header
+      #typed__array
         h2 Media Gallery
       //- #media-header-typed is where typed.js inserts the animated string
-      span#media-header-typed
+      span#typed__heading
       
     #container
     
@@ -22,7 +20,6 @@ html
     
     //- Vendor scripts
     script(src="js/vendors/typed.min.js" type="text/javascript" charset="utf-8")
-    script(src="js/vendors/particles.min.js" type="text/javascript" charset="utf-8")
     script(src="js/vendors/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8")
     script(src="js/vendors/lightgallery.min.js" type="text/javascript" charset="utf-8")
     script(src="js/vendors/lg-hash.min.js" type="text/javascript" charset="utf-8")

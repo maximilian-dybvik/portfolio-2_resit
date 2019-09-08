@@ -10,11 +10,11 @@ html
       h1 SPACE-X
       
       //- #index-header acts as a array of strings which typed.js uses for the animation and will not be visible
-      #index-header
+      #typed__array
         h2 Making Life 
         h2 Multiplanetary
       //- #index-header-typed is where typed.js inserts the animated string
-      span#index-header-typed
+      span#typed__heading
       
       a(href="#mars-article")
         include ../components/scroll-down-icon.pug
@@ -44,9 +44,7 @@ html
     include ../layout/footer.pug
     
     //- Scripts
-    script(src="js/vendors/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8")
     script(src="js/vendors/typed.min.js" type="text/javascript" charset="utf-8")
-    script(src="js/vendors/particles.min.js" type="text/javascript" charset="utf-8")
     script(src="js/vendors/smooth-scroll.polyfills.min.js" type="text/javascript" charset="utf-8")
-    script(src="js/index.js" type="text/javascript" charset="utf-8")
+    script(src="js/app.js" type="text/javascript" charset="utf-8")
   

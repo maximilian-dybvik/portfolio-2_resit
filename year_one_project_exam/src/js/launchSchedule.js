@@ -1,24 +1,8 @@
-// PARTICLES EFFECT
-particlesJS.load('particles-js', '/js/vendors/particles.json');
-
-// TYPED ANIMATION
-var typed = new Typed('#schedule-header-typed', {
-  stringsElement: '#schedule-header',
-  startDelay: 500,
-  typeSpeed: 60,
-  backDelay: 500,
-  backSpeed: 50,
-  showCursor: false,
-});
-
-// SMOOTH SCROLL
-var scroll = new SmoothScroll('a[href*="#"]');
-
 // Functions for displaying schedule data
 // LATEST LAUNCH
 fetch("https://api.spacexdata.com/v2/launches/latest")
   .then(response => response.json())
-  .then(data => { latestLaunch(data) })
+  .then(data => latestLaunch(data))
   .catch(err => console.log(err));
 
 function latestLaunch(data) {
@@ -48,7 +32,7 @@ function latestLaunch(data) {
 // NEXT LAUNCH
 fetch("https://api.spacexdata.com/v2/launches/next")
   .then(response => response.json())
-  .then(data => { nextLaunch(data) })
+  .then(data => nextLaunch(data))
   .catch(err => console.log(err));
 
 function nextLaunch(data) {

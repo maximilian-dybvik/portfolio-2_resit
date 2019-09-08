@@ -1,10 +1,7 @@
-// PARTICLES EFFECT
-particlesJS.load('particles-js', '/js/vendors/particles.json');
-
 // TYPED ANIMATION
-var typed = new Typed('#media-header-typed', {
-  stringsElement: '#media-header',
-  startDelay: 500,
+var typed = new Typed("#typed__heading", {
+  stringsElement: "#typed__array",
+  startDelay: 300,
   typeSpeed: 60,
   backDelay: 500,
   backSpeed: 50,
@@ -30,7 +27,6 @@ $container.masonry({
 var gallery;
 
 function loadImages(page, callback) {
-  console.log('loadImages page: '+page);
   var url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + apiKey + '&user_id=' + authorId + '&per_page=' + perPage + '&page=' + page + '&format=json&nojsoncallback=1';
   $.getJSON(url, function(response) {
     if (response.stat === 'ok') {
@@ -65,7 +61,6 @@ function loadImages(page, callback) {
     }
   });
 }
-console.log('-----------loadImages');
 loadImages(++startPage, function() {
   // make sure body has scroll therefore be able to do infinitescroll
   if (document.body.scrollHeight <= window.innerHeight) {
