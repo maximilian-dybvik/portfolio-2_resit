@@ -3,11 +3,13 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const pug = require('gulp-pug');
+const plumber = require('gulp-plumber');
 const browserSync = require('browser-sync');
 
 // Compile Pug templates into HTML
 gulp.task('pugToHTML', callback => {
   gulp.src('./src/pug/pages/*.pug')
+    .pipe(plumber())
     .pipe(pug({
       doctype: 'html',
       pretty: false
@@ -19,6 +21,7 @@ gulp.task('pugToHTML', callback => {
 // Transpile SASS to CSS without sourcemaps
 gulp.task('sassToCSS', callback => {
   gulp.src('./src/sass/**/*.{sass,scss}')
+    .pipe(plumber())
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(gulp.dest('./dist/css'))
   callback();
